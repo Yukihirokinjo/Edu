@@ -28,10 +28,10 @@ A variable is a character string to which we assign a value. The value assigned 
 The name of a variable must be comprised of alphabetical characters (a to z or A to Z), and/or numbers (0 to 9) or underscore (_). Numbers cannot be at the first place.  
 Examples of valid variable names:
 
-  Hensu
-  HENSU1
-  hensu_2
-  _HENSU3
+    Hensu
+    HENSU1
+    hensu_2
+    _HENSU3
 
 Examples of valid variable names:
 ```
