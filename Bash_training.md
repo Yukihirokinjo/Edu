@@ -57,7 +57,7 @@ The $PATH environmental variable is a colon-delimited list of paths to the direc
 
 To add a directory to $PATH, you can choose either one of the followings:
 
-[1. using export command]
+[ 1. using export command ]  
 Simply type
 ```
 export PATH=$PATH:/path/to/the/directory/containing/the/program
@@ -65,7 +65,7 @@ export PATH=$PATH:/path/to/the/directory/containing/the/program
 This will work, however, the new PATH is available only in the terminal you typed the command above.
 
 
-[2. adding the setting of PATH onto "~/.bashrc" file]
+[ 2. adding the setting of PATH onto "~/.bashrc" file ]  
 To avid typing the same command every time you invoke the shell, we can use "bashrc" file. bashrc" file is a file storing environmental settings in your local system, and is loaded (read) by the system every time you invoke the shell (i.e. open a terminal or login to the system). The bashrc file is generally located under your home directory as a hidden file (starting from ".").
 To add a setting on the bashrc file, you can type
 ```
