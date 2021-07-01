@@ -1,2 +1,0 @@
-# Edu
-for training
