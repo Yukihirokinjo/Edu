@@ -66,12 +66,12 @@ This will work, however, the new PATH is available only in the terminal you type
 
 
 [ 2. adding the setting of PATH onto "~/.bashrc" file ]  
-To avid typing the same command every time you invoke the shell, we can use "bashrc" file. bashrc" file is a file storing environmental settings in your local system, and is loaded (read) by the system every time you invoke the shell (i.e. open a terminal or login to the system). The bashrc file is generally located under your home directory as a hidden file (starting from ".").
+To avid typing the same command every time you invoke the shell, we can use "bashrc" file. bashrc" file is a file storing environmental settings in your local system, and is loaded (read) by the system every time you invoke the shell (i.e. open a terminal or login to the system). The bashrc file is generally located under your home directory as a hidden file (starting from ".").  
 To add a setting on the bashrc file, you can type
 ```
 echo 'export PATH=$PATH:/path/to/the/directory/containing/the/program' >> ~/.bashrc
 ```
-or directly type the command onto ~/.bashrc file by using a text editor.
+or directly write the command in ~/.bashrc file by using a text editor.
   
 To activate the additional setting, type
 
@@ -81,7 +81,7 @@ source ~/.bashrc
 
 The command above is needed only at the first time, you don't need to type this for the next time you login to the shell.
 
-IMPORTANT NOTE: Please do not forget to put "$PATH:" before the directory path, otherwise you are going to destroy all the default PATH information, and then many default commands (such as ls, cd, cp, etc..) will be not available, though you can use them by specifying their absolute path (e.g. type "/usr/bin/ls" insterd of "ls").
+>IMPORTANT NOTE: Please do not forget to put "$PATH:" before the directory path, otherwise you are going to destroy all the default PATH information, and then many default commands (such as ls, cd, cp, etc..) will be not available, though you can use them by specifying their absolute path (e.g. type "/usr/bin/ls" insterd of "ls").
 
 
 ## Chapter 3: compile, and install, a program
