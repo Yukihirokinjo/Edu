@@ -27,18 +27,18 @@ A variable is a character string to which we assign a value. The value assigned 
 ###Name of variables
 The name of a variable must be comprised of alphabetical characters (a to z or A to Z), and/or numbers (0 to 9) or underscore (_). Numbers cannot be at the first place.  
 Examples of valid variable names:
-
-    Hensu
-    HENSU1
-    hensu_2
-    _HENSU3
-
+```
+Hensu
+HENSU1
+hensu_2
+_HENSU3
+```
 Examples of valid variable names:
 ```
-  1Hensu
-  -HENSU
-  hensu/
-  !HENSU3
+1Hensu
+-HENSU
+hensu/
+!HENSU3
 ```
 
 ###Defining and accessing variables
@@ -67,13 +67,10 @@ This will work, however, the new PATH is available only in the terminal you type
 
 [2. adding the setting of PATH onto "~/.bashrc" file]
 To avid typing the same command every time you invoke the shell, we can use "bashrc" file. bashrc" file is a file storing environmental settings in your local system, and is loaded (read) by the system every time you invoke the shell (i.e. open a terminal or login to the system). The bashrc file is generally located under your home directory as a hidden file (starting from ".").
-  
 To add a setting on the bashrc file, you can type
-
 ```
 echo 'export PATH=$PATH:/path/to/the/directory/containing/the/program' >> ~/.bashrc
 ```
-
 or directly type the command onto ~/.bashrc file by using a text editor.
   
 To activate the additional setting, type
@@ -95,27 +92,27 @@ In the case of C/C++, typical procedures to compile a program is as follows.
 If there is no "Makefile" but there is "configure" file
 
 ```
-  ./configure
-  make
-  make install
+./configure
+make
+make install
 ```
 
 or, if Makefile already exists,
 
 ```
-  make
-  make install
+make
+make install
 ```
 
 Here, "make install" does system installation, which requires root permission (i.e. system administrator). Thus, you can do "make install" in your computer, but you cannot do that in the other environment, such as Deigo.
 In case you are in the other environment, you can do "local install" instead of "system install". For example, if you have already created "bin" directory under your home directory (i.e. ~/bin), and assuming that you already add ~/bin directory to "PATH" (see Chapter 3).
-
-    cp  relative/path/to/binary/file(s)  ~/bin
-
+```
+cp  relative/path/to/binary/file(s)  ~/bin
+```
 or
-
-    ln -s /full/path/to/binary/file(s)  ~/bin
-
+```
+ln -s /full/path/to/binary/file(s)  ~/bin
+```
 The first command makes a copy of the binary file at ~/bin directory, while second one makes "symbolic link" (like a shortcut file in Windows) at ~/bin directory. Note that "ln -s" command requires absolute(full) path information.
 
 
@@ -124,19 +121,17 @@ The first command makes a copy of the binary file at ~/bin directory, while seco
 In Linux and MacOS(sometime referred to as UNIX) There are several commands for compressing or deconpressing files. This time, we used ".zip" and ".tgz"(equivalent with ".tar.gz").
 
 For example, decompress(extract) a .zip file
-
-  unzip xxx.zip
-
+```
+unzip xxx.zip
+```
 or decompress a .gzip file
-
-    gunzip xxx.gzip
-
+```
+gunzip xxx.gzip
+```
 or decompress a .tar.gz file
-
-    tar zxvf xxx.tar.gz
-
-For more details, you can visit the website below if you are curious about it.
-https://www.cyberciti.biz/howto/question/general/compress-file-unix-linux-cheat-sheet.php
+```
+tar zxvf xxx.tar.gz
+```
 
 
 ## Chapter 5: file transfer via ssh (scp command)
