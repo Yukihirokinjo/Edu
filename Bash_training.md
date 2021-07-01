@@ -10,9 +10,9 @@ A location of an object from the root directory (/) is referred to as "full path
 <FIg1>
 You can see where you are working at by "pwd" command. The full path provided by pwd command is referred to as "current directory" (or "present working directory"). You can change your current directory using "cd" command. For example, suppose you are in home directory, and then you can move to the Desktop (located under the home directory) by typing
 
-```
-cd /home/yourUserName/Desktop
-```
+
+  cd /home/yourUserName/Desktop
+
 
 ###Relative path
 "Relative path" is the location relative to the current directory. Relative path to the current directory is "./", and to the directory contains current directory (referred to as "parent directory") is "../", and to the directory contains the parent directory is "../../".
@@ -27,12 +27,12 @@ A variable is a character string to which we assign a value. The value assigned 
 ###Name of variables
 The name of a variable must be comprised of alphabetical characters (a to z or A to Z), and/or numbers (0 to 9) or underscore (_). Numbers cannot be at the first place.  
 Examples of valid variable names:
-```
+
   Hensu
   HENSU1
   hensu_2
   _HENSU3
-```
+
 Examples of valid variable names:
 ```
   1Hensu
