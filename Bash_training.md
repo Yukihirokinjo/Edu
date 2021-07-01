@@ -7,7 +7,9 @@ A "path" is a location to an object (file or a directory) in a filesystem. A pat
 
 ###Full path
 A location of an object from the root directory `/` is referred to as "full path" (or "absolute path"). A typical example of the full paths in a linux system is shown in Figure 1.
-[FullPath.pdf](https://github.com/Yukihirokinjo/Edu/files/6747349/FullPath.pdf)
+  
+![FullPath.pdf](https://github.com/Yukihirokinjo/Edu/files/6747349/FullPath.pdf)
+  
 You can see where you are working at by `pwd` command. The full path provided by `pwd` command is referred to as "current directory" (or "present working directory"). You can change your current directory using `cd` command. For example, suppose you are in home directory, and then you can move to the Desktop (located under the home directory) by typing
 
 ```bash
