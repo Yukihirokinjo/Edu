@@ -8,7 +8,7 @@ A "path" is a location to an object (file or a directory) in a filesystem. A pat
 ###Full path
 A location of an object from the root directory `/` is referred to as "full path" (or "absolute path"). A typical example of the full paths in a linux system is shown in Figure 1.
   
-![FullPath.pdf](https://github.com/Yukihirokinjo/Edu/files/6747349/FullPath.pdf)
+![FullPath](https://user-images.githubusercontent.com/6457769/124109624-51fca100-daa2-11eb-939b-6f45f767a08b.png)
   
 You can see where you are working at by `pwd` command. The full path provided by `pwd` command is referred to as "current directory" (or "present working directory"). You can change your current directory using `cd` command. For example, suppose you are in home directory, and then you can move to the Desktop (located under the home directory) by typing
 
@@ -19,7 +19,8 @@ cd /home/yourUserName/Desktop
 ###Relative path
 "Relative path" is the location relative to the current directory. Relative path to the current directory is `./`, and to the directory contains current directory (referred to as "parent directory") is `../`, and to the directory contains the parent directory is `../../`.
 Figure 2 shows a typical example of the relative paths. Note that relative path will be changed every time you change your current directory as they are "relative" to the current directory. You can use a relative path as an argument to `cd` command.
-<Fig2>
+  
+![RelativePath](https://user-images.githubusercontent.com/6457769/124109523-31344b80-daa2-11eb-9b73-16701c8e9ce0.png)
 
 --------------------------------------------------------------------------------
 ## Chapter 2: Variables in linux(unix)
