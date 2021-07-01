@@ -7,7 +7,7 @@ A "path" is a location to an object (file or a directory) in a filesystem. A pat
 
 ###Full path
 A location of an object from the root directory `/` is referred to as "full path" (or "absolute path"). A typical example of the full paths in a linux system is shown in Figure 1.
-<FIg1>
+[FullPath.pdf](https://github.com/Yukihirokinjo/Edu/files/6747349/FullPath.pdf)
 You can see where you are working at by `pwd` command. The full path provided by `pwd` command is referred to as "current directory" (or "present working directory"). You can change your current directory using `cd` command. For example, suppose you are in home directory, and then you can move to the Desktop (located under the home directory) by typing
 
 ```bash
@@ -102,7 +102,7 @@ This will work, however, the new PATH is available only in the terminal you type
 
 #### 2. adding the setting of PATH onto `~/.bashrc` file   
 To avid typing the same command every time you invoke the shell, we can use `.bashrc` file. `.bashrc` file is a file storing environmental settings in your local system, and is loaded (read) by the system every time you invoke the shell (i.e. open a terminal or login to the system). The `.bashrc` file is generally located under your home directory as a hidden file (starting from ".").  
-To add a setting on the `.bashrc` file, you can type
+To add a setting to the `.bashrc` file, you can type
 ```bash
 echo 'export PATH=$PATH:/path/to/the/directory/containing/the/program' >> ~/.bashrc
 ```
@@ -119,12 +119,12 @@ The command above is needed only at the first time after you modified `.bashrc`,
 >**IMPORTANT NOTE:** Please do not forget to put "$PATH:" before the directory path(s), otherwise you are going to destroy all the default PATH information, and then many default commands (such as ls, cd, cp, etc..) will be not available, though you can use them by specifying their absolute path (e.g. type "/usr/bin/ls" insterd of "ls").
   
 --------------------------------------------------------------------------------
-## Chapter 3: compile, and install, a program
+## Chapter 3: Compiling and installing a program
 
-Programs written in a compiled language (e.g. C/C++, Java, Fortran) need to be compiled. Compiling is the transformation from "source code" (human readable) into "binary file" (computer executable). Source code(s) are generally located in the directory "src".
+Programs written in a compiled language (e.g. C/C++, Java, Fortran) need to be compiled. Compiling is the transformation from "source code" (human readable) into "binary file" (computer executable). Source code(s) are generally located in the directory `src`.
 
-In the case of C/C++, typical procedures to compile a program is as follows.
-If there is no "Makefile" but there is "configure" file
+In case of C/C++, typical procedure to compile a program is as follows.
+If there is no `Makefile` but there is `configure` file,
 
 ```bash
 ./configure
@@ -140,7 +140,7 @@ make install
 ```
 
 Here, `make install` does system installation, which requires root permission (i.e. system administrator). Thus, you can do `make install` in your computer, but you cannot do that in the other environment, such as Deigo, as it requires root permission.
-In case you are in the other environment, you can do "local install" instead of "system install". For example, if you have already created "bin" directory under your home directory (i.e. `~/bin`), and assuming that you already add `~/bin` directory to `PATH` (see Chapter 3).
+In case you are in the other environment, you can do "local install" instead of "system install". For example, if you have already created "bin" directory under your home directory (i.e. `~/bin`), and assuming that you already added `~/bin` directory to `PATH` (see Chapter 3).
 ```bash
 cp  relative/path/to/binary/file(s)  ~/bin
 ```
@@ -148,22 +148,22 @@ or
 ```bash
 ln -s /full/path/to/binary/file(s)  ~/bin
 ```
-The first command makes a copy of the binary file at ~/bin directory, while second one makes "symbolic link" (like a shortcut file in Windows) at ~/bin directory. Note that "ln -s" command requires absolute(full) path information.
+The first command makes a copy of the binary file at `~/bin` directory, while second one makes "symbolic link" (like a shortcut file in Windows) at `~/bin` directory. Note that `ln -s` command requires absolute path.
   
 --------------------------------------------------------------------------------
-## Chapter 4: file archive and compression 
+## Chapter 4: Decompression and compression of files 
 
-In Linux and MacOS(sometime referred to as UNIX) There are several commands for compressing or deconpressing files. This time, we used ".zip" and ".tgz"(equivalent with ".tar.gz").
+In Linux and MacOS(sometime referred to as UNIX) There are several commands for compressing or deconpressing files. This time, we used `.zip` and `.tgz`(equivalent with `.tar.gz`).
 
-For example, decompress(extract) a .zip file
+For example, decompress(extract) a `.zip` file
 ```bash
 unzip xxx.zip
 ```
-or decompress a .gzip file
+or decompress a `.gzip` file
 ```bash
 gunzip xxx.gzip
 ```
-or decompress a .tar.gz file
+or decompress a `.tar.gz` file
 ```bash
 tar -zxvf xxx.tar.gz
 ```
