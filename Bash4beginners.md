@@ -1,12 +1,16 @@
-# Technical summary of dN/dS course (for linux/unix)
+# Technical summary of dN/dS course (for how to work in Linux/Unix environment)
 
-ver. 0.1
+Ver. 0.1
+For the students at OIST.  
+
+>**NOTICE:** This is for Linux or Unix (MacOS) operating system. Almost all the techniques below cannot be applied to Windows system. At OIST, OS of Deigo is a Red-had linux (CentOS). Thus, for Windows users, these lectures will be helpful when you use Deigo.
+
 --------------------------------------------------------------------------------
 ## Chapter 1: Path (full/relative path)
 A "path" is a location to an object (file or a directory) in a filesystem. A path is comprised of names of directories and the separator "/".
 
 ###Full path
-A location of an object from the root directory `/` is referred to as "full path" (or "absolute path"). A typical example of the full paths in a linux system is shown in Figure 1.
+A location of an object from the root directory `/` is referred to as "full path" (or "absolute path"). A typical example of the full paths in a Linux system is shown in Figure 1.
   
 ![FullPath](https://user-images.githubusercontent.com/6457769/124109624-51fca100-daa2-11eb-939b-6f45f767a08b.png)
   
@@ -23,9 +27,9 @@ Figure 2 shows a typical example of the relative paths. Note that relative path 
 ![RelativePath](https://user-images.githubusercontent.com/6457769/124109523-31344b80-daa2-11eb-9b73-16701c8e9ce0.png)
 
 --------------------------------------------------------------------------------
-## Chapter 2: Variables in linux(unix)
+## Chapter 2: Variables in Linux(Unix)
 
-A variable is a character string to which we assign a value. The value assigned could be a number, text, filename, device, or any other type of data. There are two types of variable in linux/unix operating system: environmental (or global) variables and local variables.
+A variable is a character string to which we assign a value. The value assigned could be a number, text, filename, device, or any other type of data. There are two types of variable in Linux/Unix operating system: environmental (or global) variables and local variables.
 
 ###Name of variables
 The name of a variable must be comprised of alphabetical characters (a to z or A to Z), and/or numbers (0 to 9) or underscore `_`. Numbers cannot be at the first place.  
@@ -70,7 +74,7 @@ This form is better than simply putting `$`. You will see the reason why `${Var}
   
 
 ###Environment (global) and local variables
-In linux/unix operating system, there are two types of variables.
+In Linux/Unix operating system, there are two types of variables.
 
 ####Local variable
 Almost all cases you use a variable should be local variable. A local variable is defined by the user and is valid only in the current session (the terminal you are working at), not valid in the script files and other sessions (terminals) even if you are working at the same directory.
@@ -122,21 +126,19 @@ The command above is needed only at the first time after you modified `.bashrc`,
 >**IMPORTANT NOTE:** Please do not forget to put "$PATH:" before the directory path(s), otherwise you are going to destroy all the default PATH information, and then many default commands (such as ls, cd, cp, etc..) will be not available, though you can use them by specifying their absolute path (e.g. type "/usr/bin/ls" insterd of "ls").
   
 --------------------------------------------------------------------------------
-## Chapter 3: Compiling and installing a program
+## Chapter 4: Compiling and installing a program
 
 Programs written in a compiled language (e.g. C/C++, Java, Fortran) need to be compiled. Compiling is the transformation from "source code" (human readable) into "binary file" (computer executable). Source code(s) are generally located in the directory `src`.
 
 In case of C/C++, typical procedure to compile a program is as follows.
 If there is no `Makefile` but there is `configure` file,
-
 ```bash
 ./configure
 make
 make install
 ```
 
-or, if Makefile already exists,
-
+or, if `Makefile` already exists,
 ```bash
 make
 make install
@@ -154,27 +156,70 @@ ln -s /full/path/to/binary/file(s)  ~/bin
 The first command makes a copy of the binary file at `~/bin` directory, while second one makes "symbolic link" (like a shortcut file in Windows) at `~/bin` directory. Note that `ln -s` command requires absolute path.
   
 --------------------------------------------------------------------------------
-## Chapter 4: Decompression and compression of files 
+## Chapter 5: Decompression and compression of files 
 
-In Linux and MacOS(sometime referred to as UNIX) There are several commands for compressing or deconpressing files. This time, we used `.zip` and `.tgz`(equivalent with `.tar.gz`).
+In Linux and MacOS(sometime referred to as UNIX) There are several commands to compress or decompress files. This time, we used `.zip` and `.tgz`(equivalent with `.tar.gz`).
 
-For example, decompress(extract) a `.zip` file
+###zip
+By using `zip` command, you can do both file compression and archiving.   
+For example, to compress three files `file1 file2 file3` into a `xxx.zip` file,
+```bash
+zip  xxx.zip  file1 file2 file3
+```
+Or if you want to compress a directory,
+```bash
+zip  -r  xxx.zip  directory1
+```
+To decompress a `.zip` file, 
 ```bash
 unzip xxx.zip
 ```
-or decompress a `.gzip` file
+
+###gzip
+`gzip` command is used to compress a single file. Unlike `zip`, `gzip` does not have function for archiving files, and `gzip` cannot be applied to a directory. 
+For example, to compress a file into a `.gzip` file,
 ```bash
-gunzip xxx.gzip
+zgip  file1
 ```
-or decompress a `.tar.gz` file
+To decompress a `.gzip` file,
 ```bash
-tar -zxvf xxx.tar.gz
+gunzip  xxx.gzip
 ```
-Here, `-` before `zxvf` is not necessary.
+
+###tar
+The GNU `tar` is used to make an archive file from multiple files. Although `tar` itself does not have the function for compression, you can do `gzip` compression together with tar by using `-z` option. `tar` (with `-z` option) can compress files into slightly smaller size than `zip`. While `zip` is suitable for Windows or MacOS, `tar` would be suitable for Linux OSs.   
+For example, to compress three files into `xxx.tar.gz`,
+```bash
+tar  -zcvf  xxx.tar.gz  file1 file2 file3
+```
+Here, `-` before `zxvf` is not necessary.  
+To decompress a `.tar.gz` file,
+```bash
+tar  -zxvf xxx.tar.gz
+```
+  
+For more details, please see the link below.  
+https://www.cyberciti.biz/howto/question/general/compress-file-unix-linux-cheat-sheet.php
+
+--------------------------------------------------------------------------------
+## Chapter 6: File transfer via ssh (scp command)
+
+For the file transfer via ssh, please see the link below.  
+https://groups.oist.jp/scs/copy-and-move-data
   
 --------------------------------------------------------------------------------
-## Chapter 5: file transfer via ssh (scp command)
+## Chapter 7: File permission
+When you receive some files from someone or download file from somewhere, sometime you may be unable to access, execute, or modify the files. In most cases, such problems are due to the permission of the files. When you face such problems, you can check the permission of the files by using `ls` command with `-l` option. If you are the owner of the files, you can change their permission by using `chmod` command.  
+For the details, please go to the link below.  
+https://linuxcommand.org/lc3_lts0090.php
+  
+--------------------------------------------------------------------------------
+## Other basic Linux commands 
 
-For the file transfer, please see the link below.
-https://groups.oist.jp/scs/copy-and-move-data
+Please go to the link below.  
+https://groups.oist.jp/scs/basic-linux-commands
+  
 
+--------------------------------------------------------------------------------
+## Advanced lectures
+Coming soon.  
