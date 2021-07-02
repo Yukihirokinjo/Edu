@@ -204,7 +204,7 @@ https://www.cyberciti.biz/howto/question/general/compress-file-unix-linux-cheat-
 --------------------------------------------------------------------------------
 ## Chapter 6: File transfer via ssh (scp command)
 
-For the file transfer via ssh, please see the link below.  
+For the file transfer via ssh, please see the link below (internal).  
 https://groups.oist.jp/scs/copy-and-move-data
   
 --------------------------------------------------------------------------------
@@ -216,7 +216,7 @@ https://linuxcommand.org/lc3_lts0090.php
 --------------------------------------------------------------------------------
 ## Other basic Linux commands 
 
-Please go to the link below.  
+Please go to the link below (internal).  
 https://groups.oist.jp/scs/basic-linux-commands
   
 --------------------------------------------------------------------------------
