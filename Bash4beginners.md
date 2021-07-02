@@ -3,11 +3,11 @@
 Ver. 0.1
 For the students at OIST.  
 
->**NOTICE:** This is for Linux or Unix (MacOS) operating system (not for Windows). At OIST, OS of Deigo is a Red-had linux (CentOS). For Windows users, these guides will be helpful when you use Deigo.
+>**NOTICE:** This is for Linux or Unix (MacOS) operating system (not for Windows). At OIST, OS of Deigo is a Red-had linux (CentOS). For Windows users, this guide will be helpful when you use Deigo.
 
 --------------------------------------------------------------------------------
 ## Chapter 1: Path (full/relative path)
-A "path" is a location to an object (file or a directory) in a filesystem. A path is comprised of names of directories and the separator "/".
+A "path" is a location to an object (file or directory) in a filesystem. A path is comprised of several names of directories and the separator "/".
 
 ###Full path
 A location of an object from the root directory `/` is referred to as "full path" (or "absolute path"). A typical example of the full paths in a Linux system is shown in Figure 1.
