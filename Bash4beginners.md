@@ -31,7 +31,7 @@ Figure 2 shows a typical example of the relative paths. Note that relative path 
 
 A variable is a character string to which we assign a value. The value assigned could be a number, text, filename, device, or any other type of data. There are two types of variable in Linux/Unix operating system: environmental (or global) variables and local variables.
 
-###Name of variables
+### Name of variables
 The name of a variable must be comprised of alphabetical characters (a to z or A to Z), and/or numbers (0 to 9) or underscore `_`. Numbers cannot be at the first place.  
 Examples of valid variable names:
 ```
@@ -49,7 +49,7 @@ hensu/
 ```
 By convention, name of variables are defined in capital letters. 
 
-###Defining and accessing variables
+### Defining and accessing variables
 To define a variable, you can use `=` between the variable and a value. The value can be charactors, numbers, or a path. The variable to be defined must be left side and the value must be right side. Note that there must be "no space" between the variable, `=`, and value (i.e. the structure must be `variable=value`).
 For example,
 ```bash
@@ -73,13 +73,13 @@ echo ${TENKI}
 This form is better than simply putting `$`. You will see the reason why `${Var}` is better than `$Var` in an advanced lecture here (under prep.).
   
 
-###Environment (global) and local variables
+### Environment (global) and local variables  
 In Linux/Unix operating system, there are two types of variables.
 
-####Local variable
+#### Local variable  
 Almost all cases you use a variable should be local variable. A local variable is defined by the user and is valid only in the current session (the terminal you are working at), not valid in the script files and other sessions (terminals) even if you are working at the same directory.
   
-####Environment (global) variables
+#### Environment (global) variables  
 An environment (or global) variables are pre-defined (default) variables which are always valid in any places in the "environment". On of the most frequently used environment variable is `HOME`, which contains the path to your home directory (thus, it differ among users).  
 Regarding `HOME` environment variable, the three commands below are equivalent.
 
@@ -160,7 +160,7 @@ The first command makes a copy of the binary file at `~/bin` directory, while se
 
 In Linux and MacOS(sometime referred to as UNIX) There are several commands to compress or decompress files. This time, we used `.zip` and `.tgz`(equivalent with `.tar.gz`).
   
-###zip
+### zip
 By using `zip` command, you can do both file compression and archiving.   
 For example, to compress three files `file1 file2 file3` into a `xxx.zip` file,
 ```bash
@@ -175,7 +175,7 @@ To decompress a `.zip` file,
 unzip xxx.zip
 ```
   
-###gzip
+### gzip
 `gzip` command is used to compress a single file. Unlike `zip`, `gzip` does not have function for archiving files, and `gzip` cannot be applied to a directory. 
 For example, to compress a file into a `.gzip` file,
 ```bash
@@ -186,7 +186,7 @@ To decompress a `.gzip` file,
 gunzip  xxx.gzip
 ```
   
-###tar
+### tar
 The GNU `tar` is used to make an archive file from multiple files. Although `tar` itself does not have the function for compression, you can do `gzip` compression together with tar by using `-z` option. `tar` (with `-z` option) can compress files into slightly smaller size than `zip`. While `zip` is suitable for Windows or MacOS, `tar` would be suitable for Linux OSs.   
 For example, to compress three files into `xxx.tar.gz`,
 ```bash
