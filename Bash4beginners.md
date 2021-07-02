@@ -1,9 +1,9 @@
-# Technical summary of dN/dS course (for how to work in Linux/Unix environment)
+# Basic guide to Linux/Unix environment
 
 Ver. 0.1
 For the students at OIST.  
 
->**NOTICE:** This is for Linux or Unix (MacOS) operating system. Almost all the techniques below cannot be applied to Windows system. At OIST, OS of Deigo is a Red-had linux (CentOS). Thus, for Windows users, these lectures will be helpful when you use Deigo.
+>**NOTICE:** This is for Linux or Unix (MacOS) operating system (not for Windows). At OIST, OS of Deigo is a Red-had linux (CentOS). For Windows users, these guides will be helpful when you use Deigo.
 
 --------------------------------------------------------------------------------
 ## Chapter 1: Path (full/relative path)
@@ -159,7 +159,7 @@ The first command makes a copy of the binary file at `~/bin` directory, while se
 ## Chapter 5: Decompression and compression of files 
 
 In Linux and MacOS(sometime referred to as UNIX) There are several commands to compress or decompress files. This time, we used `.zip` and `.tgz`(equivalent with `.tar.gz`).
-
+  
 ###zip
 By using `zip` command, you can do both file compression and archiving.   
 For example, to compress three files `file1 file2 file3` into a `xxx.zip` file,
@@ -174,7 +174,7 @@ To decompress a `.zip` file,
 ```bash
 unzip xxx.zip
 ```
-
+  
 ###gzip
 `gzip` command is used to compress a single file. Unlike `zip`, `gzip` does not have function for archiving files, and `gzip` cannot be applied to a directory. 
 For example, to compress a file into a `.gzip` file,
@@ -185,7 +185,7 @@ To decompress a `.gzip` file,
 ```bash
 gunzip  xxx.gzip
 ```
-
+  
 ###tar
 The GNU `tar` is used to make an archive file from multiple files. Although `tar` itself does not have the function for compression, you can do `gzip` compression together with tar by using `-z` option. `tar` (with `-z` option) can compress files into slightly smaller size than `zip`. While `zip` is suitable for Windows or MacOS, `tar` would be suitable for Linux OSs.   
 For example, to compress three files into `xxx.tar.gz`,
@@ -200,7 +200,7 @@ tar  -zxvf xxx.tar.gz
   
 For more details, please see the link below.  
 https://www.cyberciti.biz/howto/question/general/compress-file-unix-linux-cheat-sheet.php
-
+  
 --------------------------------------------------------------------------------
 ## Chapter 6: File transfer via ssh (scp command)
 
@@ -227,3 +227,4 @@ https://www.redhat.com/sysadmin/top-10-shortcuts
 --------------------------------------------------------------------------------
 ## Advanced lectures
 Coming soon.  
+  
