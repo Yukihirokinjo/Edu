@@ -219,7 +219,11 @@ https://linuxcommand.org/lc3_lts0090.php
 Please go to the link below.  
 https://groups.oist.jp/scs/basic-linux-commands
   
-
+--------------------------------------------------------------------------------
+## Useful terminal shortcuts
+If you don't know so much about the terminal shortcuts, you should check  
+https://www.redhat.com/sysadmin/top-10-shortcuts
+  
 --------------------------------------------------------------------------------
 ## Advanced lectures
 Coming soon.  
