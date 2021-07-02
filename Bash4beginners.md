@@ -9,7 +9,7 @@ For the students at OIST.
 ## Chapter 1: Path (full/relative path)
 A "path" is a location to an object (file or directory) in a filesystem. A path is comprised of several names of directories and the separator "/".
 
-###Full path
+### Full path
 A location of an object from the root directory `/` is referred to as "full path" (or "absolute path"). A typical example of the full paths in a Linux system is shown in Figure 1.
   
 ![FullPath](https://user-images.githubusercontent.com/6457769/124109624-51fca100-daa2-11eb-939b-6f45f767a08b.png)
@@ -20,7 +20,7 @@ You can see where you are working at by using `pwd` command. The full path provi
 cd /home/yourUserName/Desktop
 ```  
 
-###Relative path
+### Relative path
 "Relative path" is the location relative to the current directory. Relative path to the current directory is `./`, and to the directory contains current directory (referred to as "parent directory") is `../`, and to the directory contains the parent directory is `../../`.
 Figure 2 shows a typical example of the relative paths. Note that relative path will be changed every time you change your current directory as they are "relative" to the current directory. You can use a relative path as an argument to `cd` command.
   
