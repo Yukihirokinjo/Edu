@@ -14,7 +14,7 @@ A location of an object from the root directory `/` is referred to as "full path
   
 ![FullPath](https://user-images.githubusercontent.com/6457769/124109624-51fca100-daa2-11eb-939b-6f45f767a08b.png)
   
-You can see where you are working at by `pwd` command. The full path provided by `pwd` command is referred to as "current directory" (or "present working directory"). You can change your current directory using `cd` command. For example, suppose you are in home directory, and then you can move to the Desktop (located under the home directory) by typing
+You can see where you are working at by using `pwd` command. The full path provided by `pwd` command is referred to as "current directory" (or "present working directory"). You can change your current directory using `cd` command. For example, suppose you are in home directory, and then you can move to the Desktop (located under the home directory) by typing
 
 ```bash
 cd /home/yourUserName/Desktop
