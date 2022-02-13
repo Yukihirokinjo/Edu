@@ -10,3 +10,4 @@
 *.lua       text eol=lf
 *.srun      text eol=lf
 *.slum      text eol=lf
+*/*/*/*/*/*.tcl       text eol=lf
