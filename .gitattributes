@@ -1,5 +1,5 @@
 * text=auto eol=lf
-*.txt       text
+*.txt       text eol=lf
 *.log       text eol=lf
 *.sh        text eol=lf
 *.py        text eol=lf
@@ -10,3 +10,4 @@
 *.lua       text eol=lf
 *.srun      text eol=lf
 *.slum      text eol=lf
+*.html      text eol=lf
