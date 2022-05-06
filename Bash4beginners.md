@@ -40,7 +40,7 @@ HENSU1
 hensu_2
 _HENSU3
 ```
-Examples of valid variable names:
+Examples of invalid variable names:
 ```
 1Hensu
 -HENSU
